@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import { styled } from "styled-components"
+
 class Box extends Component {
   render() {
-    return (<div style={{ border: '1px solid #000', margin: 5, padding: 5 }}>
+    return (<BoxContainer>
       {this.props.children}
-    </div>);
+    </BoxContainer>);
   }
 }
 export default Box
+
+const BoxContainer = styled.div`
+  border:1px solid black;
+  margin: 5px;
+  padding: 5px;
+`
